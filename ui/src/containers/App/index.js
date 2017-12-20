@@ -36,6 +36,9 @@ class App extends PureComponent {
         if (! app.loaded) {
             return this.renderLoading();
         }
+        else if (app.error) {
+            return this.renderError();
+        }
         else {
             return this.renderLoaded();
         }
@@ -43,8 +46,16 @@ class App extends PureComponent {
 
     renderLoading() {
         return (
-            <div className="App">
+            <div className='App'>
                 Loading...
+            </div>
+        );
+    }
+
+    renderError() {
+        return (
+            <div className='App'>
+                Oooops! Looks like something bad happened! :(
             </div>
         );
     }
@@ -54,7 +65,7 @@ class App extends PureComponent {
 
         return (
             <ConnectedRouter history={history}>
-                <div className="App">
+                <div className='App'>
                     {app.actor ? this.renderAuth() : this.renderUnauth()}
                 </div>
             </ConnectedRouter>
