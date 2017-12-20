@@ -1,0 +1,44 @@
+{
+    "main": "index.js",
+    "scripts": {
+        "start": "node . server",
+        "cov": "istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R spec test/index.js",
+        "test": "mocha test/index.js",
+        "prepublish": "npm run lint:staged",
+        "lint": "npm run lint:staged",
+        "lint:eslint": "eslint src/*.js index.js bin/*.js",
+        "lint:staged": "lint-staged",
+        "generator": "plop --plopfile generators/plopfile.js",
+        "gen": "npm run generator"
+    },
+    "lint-staged": {
+        "*.js": "lint:eslint"
+    },
+    "pre-commit": "lint:staged",
+    "license": "MIT",
+    "devDependencies": {
+        "babel-eslint": "^8.0.1",
+        "babel-plugin-transform-decorators": "^6.24.1",
+        "babel-plugin-transform-decorators-legacy": "^1.3.4",
+        "eslint": "^4.9.0",
+        "lint-staged": "^6.0.0",
+        "mocha": "^4.0.1",
+        "plop": "^1.9.0",
+        "pre-commit": "^1.2.2",
+        "should": "^13.1.2"
+    },
+    "dependencies": {
+        "@plant/plant": "^0.6.0",
+        "bluebird": "^3.5.1",
+        "bytes": "^3.0.0",
+        "commander": "^2.11.0",
+        "cookie": "^0.3.1",
+        "cookie-signature": "^1.0.6",
+        "error3": "^1.6.0",
+        "log4js": "^2.3.10",
+        "mime": "^2.0.3",
+        "outdent": "^0.4.1",
+        "typed-props": "^0.6.0",
+        "ws": "^3.3.3"
+    }
+}

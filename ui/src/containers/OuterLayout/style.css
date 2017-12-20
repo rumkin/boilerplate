@@ -1,0 +1,19 @@
+.InnerLayout {
+    min-height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+.InnerLayout-Header {
+    padding: 1em 0;
+    border-bottom: 1px solid #eee;
+}
+
+.InnerLayout-Main {
+    padding: 1em 0;
+}
+
+.InnerLayout-Footer {
+    padding: 1em 0;
+    border-top: 1px solid #eee;
+}

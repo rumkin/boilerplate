@@ -1,0 +1,22 @@
+import imm from '../../lib/imm.js';
+
+import * as actions from './actions';
+import * as selectors from './selectors';
+import saga from './sagas';
+
+const initialState = imm.freeze({});
+
+// Code
+function reducer(state = initialState, {type, payload}) {
+    switch (type) {
+        default:
+            return state;
+    }
+}
+
+export default {
+    actions,
+    selectors,
+    saga,
+    reducer,
+};

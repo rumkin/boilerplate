@@ -1,0 +1,37 @@
+import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import decorate from '../../lib/decorate';
+
+import {withShield} from '../../containers/Shield';
+{{#if style}}
+
+import './style.css';
+{{/if}}
+
+import actions from './actions.js';
+import selectors from './selectors.js';
+
+function mapToProps(state) {
+    return {};
+}
+
+function dispatchToProps(dispatch) {
+    return {};
+}
+
+class {{properCase name}} extends PureComponent {
+    static propTypes = {};
+
+    render() {
+        return (
+            <div className="{{properCase name}}">
+            </div>
+        );
+    }
+}
+
+export default decorate({{properCase name}}, [
+    withShield('{{camelCase name}}', actions.init),
+    connect(mapToProps, dispatchToProps),
+]);

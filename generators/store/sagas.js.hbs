@@ -1,0 +1,16 @@
+import {
+    takeEvery,
+    call,
+    put,
+} from 'redux-saga/effects';
+import {push} from 'react-router-redux';
+import Error3 from 'error3';
+
+import api from '../../api';
+import * as routes from '../../routes.js';
+
+import * as actions from './actions';
+
+export default function* sagas() {
+    yield takeEvery(/* action, generator */);
+}
